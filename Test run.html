@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="Heer.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cart-icon">
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Our Products</h1>
+      <div class="product-list">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="images/bodycare.jpg" alt="Product 1" />
+          <h3>Body Care</h3>
+          <p>£400</p>
+          <button class="add-to-cart" data-name="Body Care" data-price="400">
+            Add to Cart
+          </button>
+        </div>
+        <!-- Add more products as needed -->
+      </div>
+
+      <h2>Cart</h2>
+      <div id="cart"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

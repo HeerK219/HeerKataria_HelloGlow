@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Glow</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Heer.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- CSS for pop-up -->
+    <style>
+      /* Pop-up styles */
+      #popup-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        z-index: 1000;
+        display: none;
+      }
+      #popup-image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="top-bar">
+          <div class="logo">
+            <img src="images/logo.jpeg.jpg" alt="Logo" />
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+            <button type="submit">Search</button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="full-size-image">
+          <div class="overlay">
+            <p>
+              Explore our range of beauty products that enhance your natural
+              glow. From skincare to makeup, we offer high-quality products to
+              make you look and feel your best.
+            </p>
+            <button id="orderButton" class="btn btn-primary" onclick="location.href='product.html'">
+              Place an Order
+            </button>
+            
+          </div>
+        </div>
+
+        <div class="category-links">
+          <h2>Shop by Category</h2>
+          <div class="category">
+            <a href="products.html?category=skin-care" class="category-link">
+              <img src="images\handcream.jpeg.jpg" alt="Skin Care" />
+              <h3>Skin Care</h3>
+            </a>
+          </div>
+          <div class="category">
+            <a href="products.html?category=hair-care" class="category-link">
+              <img src="images\shampoo.jpeg.jpg" alt="Hair Care" />
+              <h3>Hair Care</h3>
+            </a>
+          </div>
+          <div class="category">
+            <a href="products.html?category=travel" class="category-link">
+              <img src="images\travel1.jpeg.jpg" alt="Travel" />
+              <h3>Travel</h3>
+            </a>
+          </div>
+        </div>
+    
+        <!-- FAQs -->
+        <div class="faq-section">
+          <h2 class="border-bottom pb-2 mb-4">Frequently Asked Questions</h2>
+          <div class="faq">
+            <h3>
+              What makes Hello Grow products different from other skincare
+              brands?
+            </h3>
+            <p>
+              Hello Grow products are crafted using 100% natural ingredients,
+              free from harmful chemicals and synthetic additives. Our
+              formulations are designed to harness the power of nature to
+              provide effective and safe skincare solutions.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Are Hello Grow products cruelty-free?</h3>
+            <p>
+              Yes, Hello Grow is committed to cruelty-free practices. We do not
+              test our products on animals, and all our ingredients are sourced
+              ethically.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Are your products suitable for sensitive skin?</h3>
+            <p>
+              Our products are formulated with gentle, natural ingredients
+              suitable for all skin types, including sensitive skin. However, we
+              recommend doing a patch test before using any new product to
+              ensure compatibility.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Are Hello Grow products vegan?</h3>
+            <p>
+              Many of our products are vegan, and we clearly label them as such.
+              Please check the product descriptions for detailed information.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>
+              Do you offer samples or travel-sized versions of your products?
+            </h3>
+            <p>
+              Yes, we offer travel-sized versions of many of our popular
+              products, as well as sample kits for those who want to try before
+              committing to full-sized products.
+            </p>
+          </div>
+        </div>
+
+        <!-- Subscription Form -->
+        <div class="subscribe-section">
+          <h2>Subscribe to Our Newsletter</h2>
+          <form action="#" method="post">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="popup-container">
+      <img id="popup-image" src="images/offer.jpeg" alt="Sale Offer" />
+
+      <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon">
+      <a href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+
+    <!-- JavaScript to control the pop-up behavior -->
+    <script>
+      // Function to display the pop-up
+      function showPopup() {
+        document.getElementById("popup-container").style.display = "block";
+      }
+
+      // Function to close the pop-up
+      function closePopup() {
+        document.getElementById("popup-container").style.display = "none";
+      }
+
+      // Call the showPopup function when the page loads
+      window.onload = function () {
+        showPopup();
+      };
+    </script>
+
+    <script src="CART 1.js"></script>
+
+    <style>
+      /* Hover effect for category boxes */
+      .category-link {
+        display: block;
+        transition: transform 0.3s;
+      }
+
+      .category-link:hover {
+        transform: scale(1.05); /* Increase scale as desired */
+      }
+    </style>
+    </style>
+  </body>
+</html>
